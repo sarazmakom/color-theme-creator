@@ -48,7 +48,7 @@ export default function ColorForm({
         />
       </label>
       <br />
-      <button>ADD COLOR</button>
+      <button className="add-color">ADD COLOR</button>
     </form>
   );
 }
