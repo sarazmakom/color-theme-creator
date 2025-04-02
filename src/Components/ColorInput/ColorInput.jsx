@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ColorInput({ id, defaultValue }) {
+export default function ColorInput({ id, name, defaultValue }) {
   const [inputValue, setInputValue] = useState(defaultValue);
 
   function handleInputValue(event) {
@@ -12,11 +12,15 @@ export default function ColorInput({ id, defaultValue }) {
       <input
         type="text"
         id={id}
-        name={id}
+        name={name}
         value={inputValue}
         onChange={handleInputValue}
       />
-      <input type="color" value={inputValue} onChange={handleInputValue} />
+      <input
+        type="color"
+        value={inputValue}
+        onChange={handleInputValue}
+      />
     </>
   );
 }
