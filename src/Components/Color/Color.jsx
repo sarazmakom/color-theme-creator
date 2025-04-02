@@ -1,7 +1,7 @@
 import "./Color.css";
 
 export default function Color({ color }) {
-  console.log("Find Issue 1");
+  // console.log("Find Issue 1");
 
   return (
     <div
@@ -17,4 +17,3 @@ export default function Color({ color }) {
     </div>
   );
 }
-
