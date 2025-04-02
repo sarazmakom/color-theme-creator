@@ -1,6 +1,8 @@
 import "./Color.css";
 
 export default function Color({ color }) {
+  console.log("Find Issue 1");
+
   return (
     <div
       className="color-card"
@@ -16,4 +18,3 @@ export default function Color({ color }) {
   );
 }
 
-console.log("Find Issue 1");
