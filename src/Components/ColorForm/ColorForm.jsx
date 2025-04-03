@@ -6,7 +6,7 @@ export default function ColorForm({
   onSubmitColor,
   initialData = {
     role: "color name",
-    hex: "#7c28a9",
+    hex: "#7C28A9",
     contrastText: "#FFFFFF",
   },
 }) {
@@ -15,8 +15,10 @@ export default function ColorForm({
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
 
-    const newColor = { id: nanoid(), ...data };
-    onSubmitColor(newColor);
+    const updatedColor = initialData.id
+      ? { ...initialData, ...data }
+      : { id: nanoid(), ...data };
+    onSubmitColor(updatedColor);
   }
 
   return (
@@ -48,7 +50,9 @@ export default function ColorForm({
         />
       </label>
       <br />
-      <button className="add-color">ADD COLOR</button>
+      <button type="submit" className="add-color">
+        {initialData.id ? "UPDATE COLOR" : "ADD COLOR"}
+      </button>
     </form>
   );
 }
