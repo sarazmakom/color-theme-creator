@@ -14,6 +14,13 @@ function App() {
   function handleDeleteColor(colorId) {
     setColors(colors.filter((color) => color.id !== colorId));
   }
+  function handleUpdateColor(updatedColor) {
+    setColors(
+      colors.map((color) =>
+        color.id == updatedColor.id ? updatedColor : color
+      )
+    );
+  }
 
   return (
     <>
@@ -22,13 +29,14 @@ function App() {
       <ColorForm onSubmitColor={handleNewColor} />
 
       {colors.length === 0 ? (
-        <p>No colors yet. Start by adding one!</p>
+        <h3>No colors yet. Start by adding one!</h3>
       ) : (
         colors.map((color) => (
           <Color
             key={color.id}
             color={color}
-            onDelete={handleDeleteColor} 
+            onDelete={handleDeleteColor}
+            onUpdate={handleUpdateColor}
           />
         ))
       )}
