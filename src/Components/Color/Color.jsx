@@ -2,10 +2,11 @@ import "./Color.css";
 import { useState } from "react";
 import { DeleteButton } from "../DeleteButton/DeleteButton";
 import ColorForm from "../ColorForm/ColorForm";
+import CopyToClipboard from "../CopyToClipboard/CopyToClipboard";
 
 export default function Color({ color, onDelete, onUpdate }) {
   const [isEdited, setIsEdited] = useState(false);
-  
+
   const handleEditClick = () => setIsEdited(true);
 
   const handleUpdateColor = (updatedColor) => {
@@ -26,6 +27,7 @@ export default function Color({ color, onDelete, onUpdate }) {
       ) : (
         <>
           <h3 className="color-card-headline">hex: {color.hex}</h3>
+          <CopyToClipboard clipText={color.hex} />
           <h4>color name: {color.role}</h4>
           <p>contrast text: {color.contrastText}</p>
           <DeleteButton onDelete={() => onDelete(color.id)} />
