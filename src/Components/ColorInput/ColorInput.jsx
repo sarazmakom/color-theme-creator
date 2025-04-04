@@ -19,6 +19,7 @@ export default function ColorInput({ id, name, defaultValue }) {
           onChange={handleInputValue}
         />
       </label>
+      <br />
       <label htmlFor="colorInput" className="color-picker">
         <input className="color-input" type="color" value={inputValue} onChange={handleInputValue} />
       </label>
