@@ -10,7 +10,7 @@ export default function ColorInput({ id, name, defaultValue }) {
 
   return (
     <>
-      <label htmlFor="textInput">
+      <label>
         <input
           type="text"
           id={id}
@@ -20,8 +20,13 @@ export default function ColorInput({ id, name, defaultValue }) {
         />
       </label>
       <br />
-      <label htmlFor="colorInput" className="color-picker">
-        <input className="color-input" type="color" value={inputValue} onChange={handleInputValue} />
+      <label className="color-picker">
+        <input
+          className="color-input"
+          type="color"
+          value={inputValue}
+          onChange={handleInputValue}
+        />
       </label>
     </>
   );
