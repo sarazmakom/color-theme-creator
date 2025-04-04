@@ -33,22 +33,23 @@ function App() {
 
   return (
     <>
-      <h1>Color Theme Creator</h1>
+      <h1 className="title">Color Theme Creator</h1>
+      <main>
+        <ColorForm onSubmitColor={handleNewColor} />
 
-      <ColorForm onSubmitColor={handleNewColor} />
-
-      {colors.length === 0 ? (
-        <h3>No colors yet. Start by adding one!</h3>
-      ) : (
-        colors.map((color) => (
-          <Color
-            key={color.id}
-            color={color}
-            onDelete={handleDeleteColor}
-            onUpdate={handleUpdateColor}
-          />
-        ))
-      )}
+        {colors.length === 0 ? (
+          <h3>No colors yet. Start by adding one!</h3>
+        ) : (
+          colors.map((color) => (
+            <Color
+              key={color.id}
+              color={color}
+              onDelete={handleDeleteColor}
+              onUpdate={handleUpdateColor}
+            />
+          ))
+        )}
+      </main>
     </>
   );
 }
