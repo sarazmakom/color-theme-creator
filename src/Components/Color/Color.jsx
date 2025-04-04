@@ -31,8 +31,8 @@ export default function Color({ color, onDelete, onUpdate }) {
             <CopyToClipboard clipText={color.hex} />
           </div>
           <div>
-            <h4>{color.role}</h4>
-            <h4>{color.contrastText.toUpperCase()}</h4>
+            <h4>COLOR ROLE: {color.role}</h4>
+            <h4>TEXT CONTRAST: {color.contrastText.toUpperCase()}</h4>
           </div>
           <div className="buttons">
             <DeleteButton onDelete={() => onDelete(color.id)} />
