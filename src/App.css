@@ -1,8 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 body {
-  padding: 1rem;
-  background-color: #f4bdd9;
+  padding: 2em;
+  background: linear-gradient(90deg, #fac6e1, #ad35c5, #911ebe);
+  background-size: 100% 100%;
+  animation: gradientShift 30s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .title {
