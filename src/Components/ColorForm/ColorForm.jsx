@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 export default function ColorForm({
   onSubmitColor,
   initialData = {
-    role: "color name",
+    role: "primary main",
     hex: "#7C28A9",
     contrastText: "#FFFFFF",
   },
@@ -41,7 +41,7 @@ export default function ColorForm({
       </label>
       <br />
       <label htmlFor="contrastText">
-        Contrast Text
+        Contrast text
         <br />
         <ColorInput
           id="contrastText"
