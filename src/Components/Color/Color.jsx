@@ -36,7 +36,9 @@ export default function Color({ color, onDelete, onUpdate }) {
           </div>
           <div className="buttons">
             <DeleteButton onDelete={() => onDelete(color.id)} />
-            <button onClick={handleEditClick}>EDIT</button>
+            <div>
+              <button onClick={handleEditClick}>EDIT</button>
+            </div>
           </div>
         </div>
       )}
