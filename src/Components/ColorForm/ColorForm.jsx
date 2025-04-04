@@ -24,7 +24,7 @@ export default function ColorForm({
   return (
     <form className="color-form" onSubmit={handleSubmit}>
       <div>
-        <h4>Color role</h4>
+        <h4>COLOR ROLE:</h4>
         <label htmlFor="role">
           <br />
           <input
@@ -37,14 +37,14 @@ export default function ColorForm({
       </div>
       <br />
       <div>
-        <h4>HEX value</h4>
+        <h4>HEX VALUE:</h4>
         <label htmlFor="hex">
           <br />
           <ColorInput id="hex" name="hex" defaultValue={initialData.hex} />
         </label>
       </div>
       <div>
-        <h4>Text contrast</h4>
+        <h4>TEXT CONTRAST:</h4>
         <label htmlFor="contrastText">
           <br />
           <ColorInput

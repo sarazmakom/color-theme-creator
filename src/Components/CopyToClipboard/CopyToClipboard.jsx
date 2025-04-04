@@ -21,7 +21,7 @@ export default function CopyToClipboard({ clipText }) {
 
   return (
     <div>
-      <button onClick={handleCopyText}>{isCopied ? "COPIED!" : "COPY"}</button>
+      <button onClick={handleCopyText}>{isCopied ? "COPIED!" : "COPY HEX"}</button>
     </div>
   );
 }
