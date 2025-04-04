@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 export default function ColorForm({
   onSubmitColor,
   initialData = {
-    role: "color name",
+    role: "primary main",
     hex: "#7C28A9",
     contrastText: "#FFFFFF",
   },
@@ -23,34 +23,38 @@ export default function ColorForm({
 
   return (
     <form className="color-form" onSubmit={handleSubmit}>
-      <label htmlFor="role">
-        Role
-        <br />
-        <input
-          type="text"
-          id="role"
-          name="role"
-          defaultValue={initialData.role}
-        />
-      </label>
+      <div>
+        <label htmlFor="role">
+          Role
+          <br />
+          <input
+            type="text"
+            id="role"
+            name="role"
+            defaultValue={initialData.role}
+          />
+        </label>
+      </div>
       <br />
-      <label htmlFor="hex">
-        HEX value
-        <br />
-        <ColorInput id="hex" name="hex" defaultValue={initialData.hex} />
-      </label>
-      <br />
-      <label htmlFor="contrastText">
-        Contrast Text
-        <br />
-        <ColorInput
-          id="contrastText"
-          name="contrastText"
-          defaultValue={initialData.contrastText}
-        />
-      </label>
-      <br />
-      <button type="submit" className="add-color">
+      <div>
+        <label htmlFor="hex">
+          HEX value
+          <br />
+          <ColorInput id="hex" name="hex" defaultValue={initialData.hex} />
+        </label>
+      </div>
+      <div>
+        <label htmlFor="contrastText">
+          Contrast text
+          <br />
+          <ColorInput
+            id="contrastText"
+            name="contrastText"
+            defaultValue={initialData.contrastText}
+          />
+        </label>
+      </div>
+      <button type="submit">
         {initialData.id ? "UPDATE COLOR" : "ADD COLOR"}
       </button>
     </form>

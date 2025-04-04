@@ -25,14 +25,22 @@ export default function Color({ color, onDelete, onUpdate }) {
       {isEdited ? (
         <ColorForm onSubmitColor={handleUpdateColor} initialData={color} />
       ) : (
-        <>
-          <h3 className="color-card-headline">hex: {color.hex}</h3>
-          <CopyToClipboard clipText={color.hex} />
-          <h4>color name: {color.role}</h4>
-          <p>contrast text: {color.contrastText}</p>
-          <DeleteButton onDelete={() => onDelete(color.id)} />
-          <button onClick={handleEditClick}>EDIT</button>
-        </>
+        <div className="container">
+          <div>
+            <h3 className="color-card-headline">{color.hex.toUpperCase()}</h3>
+            <CopyToClipboard clipText={color.hex} />
+          </div>
+          <div>
+            <h4>{color.role}</h4>
+            <h4>{color.contrastText.toUpperCase()}</h4>
+          </div>
+          <div className="buttons">
+            <DeleteButton onDelete={() => onDelete(color.id)} />
+            <div>
+              <button onClick={handleEditClick}>EDIT</button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -24,11 +24,13 @@ export function DeleteButton({ onDelete }) {
           <p className="color-card-highlight">
             Are you sure you want to delete this color?
           </p>
+          <div>
           <button onClick={handleDeleteClick}>DELETE</button>
           <button onClick={handleCancel}>CANCEL</button>
+          </div>
         </div>
       ) : (
-        <button className="delete-button" onClick={handleDeleteClick}>
+        <button onClick={handleDeleteClick}>
           DELETE
         </button>
       )}

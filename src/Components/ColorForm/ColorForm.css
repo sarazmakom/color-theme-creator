@@ -1,3 +1,8 @@
-.add-color{
-    background-color: rgb(239, 143, 143);
+.color-form {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5em;
+  background-color: rgb(239, 143, 143);
+  display: grid;
+  justify-content: center;
 }
